@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOME</title>
+</head>
+<style>
+body {
+      background-image: url("https://images.unsplash.com/photo-1571113390215-0cdbbd0d0134?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80");
+      background-repeat: no-repeat;
+      background-attachment: fixed;  
+      background-size: cover;
+    }
+</style>
+
+<body   style="color:rgb(253, 246, 250);">
+
+<h1 style="color:rgb(4, 4, 7);"><center> CAMPUS RECRUITMENT</center></h1>
+
+<form action="{% url 'result' %}" method="post">
+    {% csrf_token %}
+<center>
+
+
+   <b>APPLICATION NUMBER:</b>
+  <input type="text"   name="application_no" align ="right" required>
+  <br><br>
+
+  <b>GENDER:</b>
+  <select name="gender">
+  <option value="0">female</option>
+  <option value="1">male</option>
+  </select>
+  <br><br>
+
+  <b>SSC PERCENTAGE:</b>
+  <input type="text"  name="SSC PERCENTAGE" align="right" required>
+  <br><br>
+
+ <b>SSC BRANCH:</b> 
+  <select name="SSC BRANCH">
+  <option value="0">central</option>
+  <option value="1">others</option>
+  </select>
+  <br><br>
+
+  <b>HSC PERCENTAGE:</b> 
+  <input type="text"  name="HSC PERCENTAGE" align="right" required>
+  <br><br>
+
+  <b></b>BOARD OF EDUCATION:
+  <select name="BOARD OF EDUCATION">
+  <option value="0">central</option>
+  <option value="1">others</option>
+  </select>
+  <br><br>
+
+ <b>HSC BRANCH:</b> 
+  <select name="HSC BRANCH">
+  <option value="0">arts</option>
+  <option value="1">science</option>
+  <option value="2">commerce</option>
+  </select>
+  <br><br>
+
+  <b>DEGREE PERCENTAGE:</b>
+  <input type="text"  name="DEGREE PERCENTAGE" align="right" required>
+  <br><br>
+
+  <b>DEGREE SPECIALISATION:</b>
+  <select name="degree_specialisation" required>
+  <option value="0">Sci&Tech</option>
+  <option value="2">Comm&Mgmt</option>
+  <option value="1">others</option>
+  </select>
+  <br><br>
+
+  <b> WORK EXPERIENCE:</b>
+  <select name="WORK EXPERIENCE">
+  <option value="0">no</option>
+  <option value="1">yes</option>
+  </select>
+  <br><br>
+
+  <b>ETEST PERCENTAGE:</b>
+  <input type="text"  name="ETEST PERCENTAGE"align="right" required>
+  <br><br>
+
+  <b>MBA SPECIALISATION: </b>
+  <select name="MBA SPECIALISATION">
+  <option value="0">Mkt&HR</option>
+  <option value="1">Mkt&Fin</option>
+  </select>
+  <br><br>
+
+  <b>PERCENTAGE:</b>
+  <input type="text"  name="MBA PERCENTAGE" align="right" required>
+  <br><br>
+
+  <input type="submit" name="predict" value="Predict">
+   <br><br>
+
+</center>
+</form>
+</body>
+</html>
